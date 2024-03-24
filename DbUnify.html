@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+
+    <link rel="stylesheet" href="public/styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+
+    <script src="public/js/index.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <title>Sepehr0Day | DbUnify</title>
+    <link rel="icon" href="public/icon/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="dark:bg-black bg-white"
+      style="background-color: black !important; font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
+      class="dark:bg-slate-900 bg-white dark:text-white">
+
+    <nav style="background-color: black !important;" class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><span><img height="50" width="50" src="public/icon/favicon.ico"
+                                                        alt="Sepehr0Day(ICON)"></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#link2" role="button" data-bs-toggle="dropdown">Installation</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#link2_1">Pypi</a></li>
+                            <li><a class="dropdown-item" href="#link2_2">Github</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#link3">Connect To Database</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#link4" role="button" data-bs-toggle="dropdown">Class Manager</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#link4_1">create_table</a></li>
+                            <li><a class="dropdown-item" href="#link4_2">drop_table</a></li>
+                            <li><a class="dropdown-item" href="#link4_3">add_column</a></li>
+                            <li><a class="dropdown-item" href="#link4_4">insert_row</a></li>
+                            <li><a class="dropdown-item" href="#link4_5">delete_column</a></li>
+                            <li><a class="dropdown-item" href="#link4_6">delete_row</a></li>
+                            <li><a class="dropdown-item" href="#link4_7">update_row</a></li>
+                            <li><a class="dropdown-item" href="#link4_8">select_one</a></li>
+                            <li><a class="dropdown-item" href="#link4_9">select</a></li>
+                            <li><a class="dropdown-item" href="#link4_10">fetch_all</a></li>
+                            <li><a class="dropdown-item" href="#link4_11">close</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#link5" role="button" data-bs-toggle="dropdown">Class Exporter</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#link5_1">export_chart_database</a></li>
+                            <li><a class="dropdown-item" href="#link5_2">export_chart_table</a></li>
+                            <li><a class="dropdown-item" href="#link5_3">export_data_csv</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#link6" role="button" data-bs-toggle="dropdown">Class Raw</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#link6_1">execute_query</a></li>
+                            <li><a class="dropdown-item" href="#link6_2">list_tables</a></li>
+                            <li><a class="dropdown-item" href="#link6_3">insert_base64</a></li>
+                            <li><a class="dropdown-item" href="#link6_4">read_base64</a></li>
+                            <li><a class="dropdown-item" href="#link6_5">backup_database</a></li>
+                            <li><a class="dropdown-item" href="#link6_6">restore_database</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+    <div class="row">
+        <div class="mt-2 p-3">
+        <section id="link2">
+            <div class="h-full mt-5">
+                <h1 class="text-white">Installation</h1>
+            </div>
+            <section id="link2_1">
+                <div>
+                    <h5 class="text-white">Install Use Pypi</h5>
+                    <p></p>
+                    <div class="box language-bash" id="InstallUsePip">
+                        <p>
+                            pip install DbUnify
+                        </p>
+                    </div>
+
+                    <button class="btn btn-outline-primary" onclick="copyText('InstallUsePip')">
+                        Copy
+                    </button>
+                </div>
+            </section>
+            <section id="link2_2" class="border-l-[2px]">
+                <div>
+                    <br><br>
+                    <h5 class="text-white">Install Use Github</h5>
+                    <div class="box language-bash" id="InstallUseGithub">
+                        <p>
+                            git clone https://github.com/Sepehr0Day/DbUnify.git
+                        </p>
+                    </div>
+                    <button class="btn btn-outline-primary" onclick="copyText('InstallUseGithub')">
+                        Copy
+                    </button>
+                </div>
+            </section>
+        </section>
+        <br><br>
+        <section id="link3"><br>
+            <div class="mt-5">
+                <h1 class="text-white">Connect To Database</h1>
+                <p class="text-white">
+                    <strong>for easy use we use sync classes but code not different with aio(async) version, its same.</strong>
+                </p><br>
+                <h2 class="Font14 m-2">Code:</h2>
+                <div class="m-3">
+            <pre class="PythonBox"><code class="language-python">
+import DbUnify.sync as sync
+
+# Initialize a database manager with the name 'database.db'
+db_manager = sync.Manager('database.db')
+</code></pre>
+                </div>
+                <h2 class="Font14 m-2">Output:</h2>
+                <div class="m-3">
+          <pre class="BashBox"><code class="language-bash">
+None
+</code></pre>
+                </div>
+            </div>
+        </section>
+        <section id="link4">
+            <div class="mt-5">
+
+                <h1 class="text-white">Class Manager</h1>
+                <p class="Font14">Functions</p>
+            </div>
+            <section id="link4_1">
+                <div>
+                    <h3 class="text-white">create_table</h3>
+                    <h2 class="Font14 m-2">Code:</h2>
+                    <p class="Font14 m-3"><strong>Parameters:</strong></p>
+                    <ul> 
+                        <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to be created.</li>
+                        <li class="Light"><code class="function">columns</code> (<code class="argument">List</code>): List of tuples containing column names and data types.</li>
+                    </ul>
+                    <div class="m-3">
+            <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Create a table named 'employees' with specified columns
+db_manager.create_table('employees', [
+    ('id', 'INTEGER PRIMARY KEY'), 
+    ('name', 'TEXT'),
+    ('age', 'INTEGER'),
+    ('department', 'TEXT')
+    ])
+
+            </code></pre>
+                    </div>
+                    <h2 class="Font14 m-2">Output:</h2>
+                    <div class="m-3">
+                      <pre class="BashBox"><code class="language-bash">
+None
+                        </code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="link4_2">
+                <h3 class="text-white">drop_table</h3>
+                <h2 class="m-2 Font14">Code:</h2>
+                <p class="Font14 m-3"><strong>Parameters:</strong></p>
+                    <ul> 
+                        <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to be dropped.</li>
+                    </ul>
+                <div class="m-3">
+            <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Drop the 'employees' table
+db_manager.drop_table('employees')
+            </code></pre>
+                </div>
+                <h2 class="Font14 m-2">Output:</h2>
+                <div class="m-3"><pre class="BashBox"><code class="language-bash">
+None
+</code></pre>
+                </div>
+    </div>
+ 
+             </section>
+
+    <section id="link4_3">
+        <div>
+            <h3 class="text-white">add_column</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>):  Name of the table to add the column to.</li>
+                <li class="Light"><code class="function">column_name</code> (<code class="argument">str</code>): Name of the column to be added.</li>
+                <li class="Light"><code class="function">data_type</code> (<code class="argument">str</code>): Data type of the column.</li>            
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Add a new column 'description' to the 'department' table
+db_manager.add_column('department', "description", "text")
+
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_4">
+        <div>
+            <h3 class="text-white">insert_row</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to insert the row into.</li>
+                <li class="Light"><code class="function">values</code> (<code class="argument">dict</code>): Dictionary of column-value pairs for the row.</li>      
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Insert rows into the 'employees' table
+db_manager.insert_row('employees', 
+    {
+        'name': 'Alice',
+        'age': 30,
+        'department': 'HR'
+    })
+
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_5">
+        <div>
+            <h3 class="text-white">delete_column</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to delete the column from.</li>
+                <li class="Light"><code class="function">values</code> (<code class="argument">str</code>): Name of the column to be deleted.</li>      
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Delete the column 'description' from the 'department' table
+db_manager.delete_column('department', 'description')
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_6">
+        <div>
+            <h3 class="text-white">delete_row</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to delete the row from.</li>
+                <li class="Light"><code class="function">condition</code> (<code class="argument">str</code>): Condition for row deletion.</li>      
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Delete a row from the 'employees' table where id = 1
+db_manager.delete_row('employees', 'id = 2')
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_7">
+        <div>
+            <h3 class="text-white">update_row</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to update the row in.</li>
+                <li class="Light"><code class="function">values</code> (<code class="argument">dict</code>): Dictionary of column-value pairs to be updated.</li>      
+                <li class="Light"><code class="function">condition</code> (<code class="argument">str</code>): Condition for row update.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Update a row in the 'employees' table where id = 1
+db_manager.update_row('employees', 
+    {
+        'name': 'Alice',
+        'age': 31,
+        'department': 'HR'
+    },
+        'id = 1')
+
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_8">
+        <div>
+            <h3 class="text-white">select_one</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to search in.</li>
+                <li class="Light"><code class="function">condition</code> (<code class="argument">str</code>): Condition for row search.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Select a row from the 'employees' table where id = 1
+data = db_manager.select_one('employees', 'id = 1')
+print(data)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+(1, 'Alice', 30, 'HR')
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_9">
+        <div>
+            <h3 class="text-white">select</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to search in.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Select all rows from the 'employees' table
+employees = db_manager.select('employees')
+print(employees)
+
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+[(1, 'Alice', 30, 'HR'), (3, 'Charlie', 40, 'Finance')]
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_10">
+        <div>
+            <h3 class="text-white">fetch_all</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">query</code> (<code class="argument">str</code>): The SQL query to be executed <strong>and fetchall</strong>.</li>
+                <li class="Light"><code class="function">*args</code> (<code style="color: #52cbff !important;">Any</code>): Parameters to be passed to the query.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+# Fetch information about the 'employees' table
+db_manager.fetch_all("PRAGMA table_info('employees')")
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+[(0, 'id', 'INTEGER', 0, None, 1), 
+(1, 'name', 'TEXT', 0, None, 0),
+(2, 'age', 'INTEGER', 0, None, 0),
+(3, 'department', 'TEXT', 0, None, 0)]</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link4_11">
+        <div>
+            <h3 class="text-white">close</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Raises:</strong></p>
+            <ul> 
+                <li class="Light"><code style="color: red !important;">ConnectionError : </code> If there is an error closing the connection.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+
+db_manager.close()
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+Noen</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <section id="link5">
+        <div class="">
+            <br><br>
+            <h1 class="text-white">Class Exporter</h1>
+            <p class="Font14">Functions</p>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <section id="link5_1">
+        <div>
+            <h3 class="text-white">export_chart_database</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">output_directory</code> (<code class="argument">str</code>): The directory where chart images will be saved.</li>
+                <li class="Light"><code class="function">chart_type</code> (<code class="argument">str</code>): The type of chart to create ('bar', 'line', 'scatter', 'histogram').</li>      
+                <li class="Light"><code class="function">x_label</code> (<code class="argument">str</code>): Label for the x-axis.</li>
+                <li class="Light"><code class="function">y_label</code> (<code class="argument">str</code>): Label for the y-axis.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+exporter = sync.Exporter(db_manager)
+
+# Export the entire database to a chart
+path = '.'
+exporter.export_chart_database(path, 'line', 'X', 'Y')
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link5_2">
+        <div>
+            <h3 class="text-white">export_chart_table</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the database table to retrieve data from.</li>
+                <li class="Light"><code class="function">x_column</code> (<code class="argument">int</code>): Index of the x-axis column in the retrieved data.</li>
+                <li class="Light"><code class="function">y_column</code> (<code class="argument">int</code>): Index of the y-axis column in the retrieved data.</li>
+                <li class="Light"><code class="function">x_label</code> (<code class="argument">str</code>): Label for the x-axis.</li>
+                <li class="Light"><code class="function">y_label</code> (<code class="argument">str</code>): Label for the y-axis.</li>
+                <li class="Light"><code class="function">title</code> (<code class="argument">str</code>): Title of the chart.</li>
+                <li class="Light"><code class="function">save_path</code> (<code class="argument">str</code>): Path to save the chart image.</li>
+                <li class="Light"><code class="function">chart_type</code> (<code class="argument">str</code>): The type of chart to create ('bar', 'line', 'scatter', 'histogram')</li>
+
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+exporter = sync.Exporter(db_manager)
+
+# Export data from the 'employees' table to a chart
+exporter.export_chart_table(
+    table_name='employees',
+    save_path='employees_chart.png',
+    y_column=2, 
+    x_column=1,  
+    y_label='age',
+    x_label='name'
+)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link5_3">
+        <div>
+            <h3 class="text-white">export_data_csv</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>):  The name of the table to export data from.</li>
+                <li class="Light"><code class="function">csv_file_path</code> (<code class="argument">str</code>): The path to save the exported CSV file.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+exporter = sync.Exporter(db_manager)
+
+# Export data from the 'employees' table to a CSV file
+exporter.export_data_csv('employees', path)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link6">
+        <div>
+            <br><br>
+            <h1 class="text-white">Class Raw</h1>
+            <p class="Font14">Functions</p>
+        </div>
+    </section>
+    <section id="link6_1">
+        <div>
+            <h3 class="text-white">execute_query</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">query</code> (<code class="argument">str</code>): The SQL query to be executed.</li>
+                <li class="Light"><code class="function">*args</code> (<code style="color: #52cbff !important;">str</code>): Parameters to be passed to the query.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# Execute a query to delete a row from the 'department' table where id = 1
+data = raw.execute_query("DELETE FROM department WHERE id = 1;")
+print(data)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+True
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link6_2">
+        <div>
+            <h3 class="text-white">list_tables</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# List all tables in the database
+tables = raw.list_tables()
+print(tables)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+['employees']
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link6_3">
+        <div>
+            <h3 class="text-white">insert_base64</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to insert data into.</li>
+                <li class="Light"><code class="function">data_dict</code> (<code class="argument">dict</code>): A dictionary where keys are column names, and values are data to be encoded and inserted.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# Insert a row into the 'employees' table using base64 encoding
+raw.insert_base64('employees', 
+    {
+        'name': 'max',
+        'age': 24,
+        'department': 'security'
+    })
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+None
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link6_4">
+        <div>
+            <h3 class="text-white">read_base64</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">table_name</code> (<code class="argument">str</code>): Name of the table to read data from.</li>
+                <li class="Light"><code class="function">data_dict</code> (<code class="argument">dict</code>): If True, only return rows where at least one column contains base64 encoded data.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# Read data from the 'employees' table using base64 encoding
+data = raw.read_base64('employees', True)
+print("Output only_base64=True : \n" + data)
+
+data = raw.read_base64('employees', False)
+print("Output only_base64=False : \n" + data)
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+Outout only_base64=True : 
+[{'id': 4, 'name': b'max', 'age': b'24', 'department': b'security'}]
+
+Output only_base64=False :  
+[{'id': 1, 'name': 'Alice', 'age': 30, 'department': 'HR'},
+{'id': 2, 'name': 'Bob', 'age': 35, 'department': 'IT'},
+{'id': 3, 'name': 'Charlie', 'age': 40, 'department': 'Finance'},
+{'id': 4, 'name': b'max', 'age': b'24', 'department': b'security'}]
+</code></pre>
+            </div>
+        </div>
+    </section>
+    
+    <section id="link6_5">
+        <div>
+            <h3 class="text-white">backup_database</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">backup_path</code> (<code class="argument">str</code>): The path where the backup should be stored.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# Backup the database to a file named 'backup.db'
+raw.backup_database('C://backup.db')
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+True
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="link6_6">
+        <div>
+            <h3 class="text-white">backup_database</h3>
+            <h2 class="Font14 m-2">Code:</h2>
+            <p class="Font14 m-3"><strong>Parameters:</strong></p>
+            <ul> 
+                <li class="Light"><code class="function">backup_path</code> (<code class="argument">str</code>): The path where the backup should be stored.</li>
+            </ul>
+            <div class="m-3">
+    <pre class="PythonBox"><code class="language-python">
+db_manager = sync.Manager('database.db')
+raw = sync.Raw(db_manager)
+
+# Restore the database from the backup file 'backup.db'
+raw.restore_database('C://backup.db')
+    </code></pre>
+            </div>
+            <h2 class="Font14 m-2">Output:</h2>
+            <div class="m-3">
+              <pre class="BashBox"><code class="language-bash">
+True
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+    <section id="link6">
+        <div>
+            <h1 class="text-white">Issues</h1>
+            <p class="m-3">
+                If you have any issue please raise a PR in github
+                <a href="https://github.com/Sepehr0Day/DbUnify/issues" target="_blank"
+                   class="bg-gray-300 text-slate-700 rounded p-1 hover:text-pink-400">
+                    <button type="button" class="btn btn-outline-primary">Go To issue</button>
+                </a>
+            </p>
+        </div>
+    </section>
+
+</div>
+</div>
+<br><br>
+<footer style="margin-top: auto; background-color: #3D3B40;">
+    <div style="height: 100px;" class="d-flex justify-content-center align-items-center">
+        <p style="text-align: center; color: #068FFF; margin: 0;">
+            &copy; 2024 Sepehr0Day. All rights reserved
+        </p>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+    new ClipboardJS('.code');
+</script>
+<script>
+    function toggleMenu() {
+        var nav = document.getElementById("main-nav");
+        nav.classList.toggle("active");
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+
+</html>
